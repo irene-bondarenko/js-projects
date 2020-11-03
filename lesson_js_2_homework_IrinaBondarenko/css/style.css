@@ -1,0 +1,23 @@
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    border: none;
+    border-radius: 6px;
+    padding: 20px 35px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: tomato;
+}
+
+.button:nth-child(1) {
+    margin-right: 25px;
+}
+
+.button:hover {
+    background-color: rgb(223, 84, 60);
+}
