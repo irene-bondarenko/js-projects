@@ -17,3 +17,4 @@ for (let i = 0; i < arr["eng"].length; i++){
         console.log(arr["eng"][i]);
     }
 })
+
