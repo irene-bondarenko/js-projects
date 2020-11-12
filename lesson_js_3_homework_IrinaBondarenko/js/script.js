@@ -38,22 +38,31 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         };
     });
-    let exampleBox = document.querySelector(".example-box")
+    let exampleBox = document.querySelector(".example-box");
     let inputTL = document.querySelector(".inputTL");
+    
     inputTL.addEventListener("input", function () {
+        let brTL = document.querySelector(".brTL")
         exampleBox.style.borderTopLeftRadius = this.value + "%";
+        brTL.textContent = "border-top-left-radius: " + this.value + "%"
     });
     let inputTR = document.querySelector(".inputTR");
     inputTR.addEventListener("input", function () {
+        let brTR = document.querySelector(".brTR")
         exampleBox.style.borderTopRightRadius = this.value + "%";
+        brTR.textContent = "border-top-right-radius: " + this.value + "%"
     });
     let inputBR = document.querySelector(".inputBR");
     inputBR.addEventListener("input", function () {
+        let brBR = document.querySelector(".brBR")
         exampleBox.style.borderBottomRightRadius = this.value + "%";
+        brBR.textContent = "border-bottom-right-radius: " + this.value + "%"
     });
     let inputBL = document.querySelector(".inputBL");
     inputBL.addEventListener("input", function () {
+        let brBL = document.querySelector(".brBL")
         exampleBox.style.borderBottomLeftRadius = this.value + "%";
+        brBL.textContent = "border-bottom-left-radius: " + this.value + "%"
     });
 });
 

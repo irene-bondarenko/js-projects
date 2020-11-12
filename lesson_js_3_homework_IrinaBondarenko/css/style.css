@@ -76,6 +76,10 @@ body {
     background-color: lightblue;
     position: absolute;
     left: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .top-left {
