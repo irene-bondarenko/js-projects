@@ -61,3 +61,43 @@ body {
 .hex-color::selection {
     background-color: #aca5a55b;
 }
+
+/* Border radius */
+.border-radius__wrap {
+    position: relative;
+    width: 550px;
+    height: 350px;
+}
+
+.example-box {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    background-color: lightblue;
+    position: absolute;
+    left: 550px;
+}
+
+.top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

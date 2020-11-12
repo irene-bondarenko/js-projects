@@ -4,16 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
         if (evt.keyCode == 32) {
             let bgColor = document.querySelector(".color-wrap"),
                 hexColorText = document.querySelector(".hex-color");
-            var hex = '#';
-            var range = 'ABCDEF0123456789';
+            let hex = '#';
+            let range = 'ABCDEF0123456789';
 
-            for (var i = 0; i < 6; i++) {
+            for (let i = 0; i < 6; i++) {
                 hex += range.charAt(Math.floor(Math.random() * range.length));
             }
             bgColor.style.background = hex;
             hexColorText.innerHTML = hex;
 
-            var e, t, n, r, i = bgColor.style.background;
+            let e, t, n, r, i = bgColor.style.background;
             if (i.match(/^rgb/)) {
                 i = i.match(/rgb\(([^)]+)\)/)[1];
                 i = i.split(/ *, */).map(Number);
@@ -38,14 +38,30 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         };
     });
+    let exampleBox = document.querySelector(".example-box")
+    let inputTL = document.querySelector(".inputTL");
+    inputTL.addEventListener("input", function () {
+        exampleBox.style.borderTopLeftRadius = this.value + "%";
+    });
+    let inputTR = document.querySelector(".inputTR");
+    inputTR.addEventListener("input", function () {
+        exampleBox.style.borderTopRightRadius = this.value + "%";
+    });
+    let inputBR = document.querySelector(".inputBR");
+    inputBR.addEventListener("input", function () {
+        exampleBox.style.borderBottomRightRadius = this.value + "%";
+    });
+    let inputBL = document.querySelector(".inputBL");
+    inputBL.addEventListener("input", function () {
+        exampleBox.style.borderBottomLeftRadius = this.value + "%";
+    });
 });
 
 // Get the element with id="defaultOpen" and click on it
-document.querySelector(".defaultOpen").click();
-
-function openTab(evt, tabName) {
+    document.querySelector(".defaultOpen").click();
+    function openTab(evt, tabName) {
     // Declare all variables
-    var i, tabcontent, tablink;
+    let i, tabcontent, tablink;
 
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -62,4 +78,4 @@ function openTab(evt, tabName) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(tabName).style.display = "flex";
     evt.currentTarget.className += " active";
-}
+    };
