@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bulma/bulma.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Lesson JS 5</title>
+</head>
+
+<body>
+
+
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tab-link defaultOpen" onclick="openTab(event, 'color-random')">Генератор цвета</button>
+        <button class="tab-link" onclick="openTab(event, 'border-radius')">Border-radius</button>
+        <button class="tab-link" onclick="openTab(event, 'form')">Форма</button>
+    </div>
+
+    <!-- Tab content -->
+
+    <!-- Random Color -->
+    <div class="color-wrap">
+        <div id="color-random" class="tabcontent">
+            <h1 class="hex-color">Press space to start</h1>
+        </div>
+    </div>
+    <!-- Border Radius -->
+    <div id="border-radius" class="tabcontent">
+        <div class="border-radius__wrap">
+            <div class="top-left">
+                <input class="inputTL" type="range" minlength="0" maxlength="50">
+            </div>
+            <div class="top-right">
+                <input class="inputTR" type="range" minlength="0" maxlength="50">
+            </div>
+            <div class="bottom-right">
+                <input class="inputBR" type="range" minlength="0" maxlength="50">
+            </div>
+            <div class="bottom-left">
+                <input class="inputBL" type="range" minlength="0" maxlength="50">
+            </div>
+        </div>
+        <div class="example-box">
+            <p class="brTL"></p>
+            <p class="brTR"></p>
+            <p class="brBR"></p>
+            <p class="brBL"></p>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="tabcontent" id="form">
+        <section class="container">
+            <form action="#" method="POST" class="js-form">
+                <div class="field">
+                    <label class="label">Ваше имя</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Иван" required required data-validate-field="name"
+                            name="user-name">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Почта</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input" type="email" placeholder="example@gmail.com" required
+                            data-validate-field="email" name="user-email">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Номер телефона</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input phoneInput" type="tel" placeholder="+38 066 66-66-66" required
+                            data-validate-field="phone" name="user-phone">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-tty"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Ваше сообщение</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Введите сообщение..." required
+                            data-validate-field="message" name="user-message"></textarea>
+                    </div>
+                </div>
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link" type="submit">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+<script src="./js/inputmask.js"></script>
+<script src="./js/just-validate.min.js"></script>
+<script src="./js/script.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
+</html>
