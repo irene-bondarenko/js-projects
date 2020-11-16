@@ -4,14 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bulma/bulma.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Lesson JS 3</title>
+    <title>Lesson JS 4</title>
 </head>
 
 <body>
+    <section class="container">
+        <form action="#" method="POST" class="js-form">
+            <div class="field">
+                <label class="label">Ваше имя</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Иван" required required data-validate-field="name"
+                        name="user-name">
+                </div>
+            </div>
 
+            <div class="field">
+                <label class="label">Почта</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="email" placeholder="example@gmail.com" required
+                        data-validate-field="email" name="user-email">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Номер телефона</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input phoneInput" type="tel" placeholder="+38 066 66-66-66" required
+                        data-validate-field="phone" name="user-phone">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-tty"></i>
+                    </span>
+                </div>
+            </div>
 
+            <div class="field">
+                <label class="label">Ваше сообщение</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Введите сообщение..." required data-validate-field="message"
+                        name="user-message"></textarea>
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link" type="submit">Отправить</button>
+                </div>
+            </div>
+        </form>
+    </section>
 </body>
+<script src="./js/inputmask.js"></script>
+<script src="./js/just-validate.min.js"></script>
 <script src="./js/script.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
 
 </html>
