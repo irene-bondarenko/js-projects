@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap');
+
+$color-blue: rgba(148, 187, 233, 1);
+$color-pink: rgba(238, 174, 202, 1);
+
+// Basic styles
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Caveat', cursive;
+    font-weight: normal;
+    background: $color-blue;
+}
+
+// Styles for elements
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.title {
+    font-weight: bold;
+    color: darken($color-blue, 50%);
+    margin-top: 20px;
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+}
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    border-radius: 23px;
+    color: white;
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+
+    &-add {
+        background-color: darken($color-blue, 50%);
+
+        &:hover {
+            background-color: darken($color-blue, 25%);
+        }
+    }
+
+    &-delete {
+        background-color: rgba(white, 0);
+        padding: 0 5px;
+        width: 25px;
+        font-size: 1.2rem;
+
+        &:hover {
+            color: red;
+        }
+
+        &:active {
+            outline: none;
+            color: darken(red, 15%);
+        }
+
+        &:focus {
+            outline: none;
+            color: darken(red, 15%);
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    &-wrap {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    &-field {
+        border: 2px dotted darken($color-blue, 50%);
+        font-family: 'Caveat', cursive;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: darken($color-blue, 50%);
+        background-color: rgba(white, 0);
+        padding: 10px 15px;
+        border-radius: 23px;
+        margin-right: 20px;
+        width: 320px;
+
+        &:focus {
+            outline: none;
+            background-color: rgba($color-pink, 0.4);
+        }
+    }
+}
+
+.list-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px 0;
+    justify-items: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.task {
+    &-title {
+        font-weight: normal;
+    }
+
+    &-status {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &-row {
+        cursor: pointer;
+        width: 450px;
+        position: relative;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 30px;
+        grid-gap: 0 10px;
+        background-color: darken($color-pink, 15%);
+        padding: 15px 25px;
+        border-radius: 25px;
+        font-size: 1.2rem;
+        color: white;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: darken($color-pink, 25%);
+        }
+
+        &--checked {
+            background: rgb(160, 156, 156);
+            color: white;
+            text-decoration: line-through;
+
+            &:hover {
+                background-color: rgb(160, 156, 156);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                border-color: darken($color-blue, 50%);
+                border-style: solid;
+                border-width: 0 3px 3px 0;
+                top: 15px;
+                left: -1px;
+                transform: rotate(45deg);
+                height: 18px;
+                width: 10px;
+            }
+        }
+    }
+}
