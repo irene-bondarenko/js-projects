@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("tasks", JSON.stringify(arrTasks))
     };
     const addNewTask = () => {
-        if (intField.value =="") {
+        if (intField.value.trim() =="") {
             alert("Задача не может быть пустой! Напишите, что нужно сделать :)")
         } else {
         arrTasks.push(new newTask(intField.value));
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const createRow = (elem, index) => {
         return `
         <label>
-        <div class="task-row ${elem.status ? "task-row--checked" : ""}">
+        <div class="task-row ${elem.status ? "task-row--checked" : ""}>
             <h3 class="task-title">${elem.taskText}</h3>
             <input class="task-status custom-checkbox" type="checkbox" ${elem.status ? "checked" : ""} data-index="${index}">
             <button class="button button-delete" data-index="${index}"><i class="fas fa-trash-alt"></i></button>
