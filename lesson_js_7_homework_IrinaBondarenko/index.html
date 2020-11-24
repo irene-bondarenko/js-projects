@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Lesson JS 7</title>
+</head>
+
+<body>
+    <div class="tabs">
+
+        <!-- Tab links -->
+        <ul class="tabs__caption">
+            <li class="tab-button active">Генератор цвета</li>
+            <li class="tab-button">Border-radius</li>
+            <li class="tab-button">Массив</li>
+        </ul>
+
+        <!-- Tab content -->
+
+        <!-- Random Color -->
+        <div class="color-wrap">
+            <div class="tabs__content active">
+                <h1 class="hex-color">Press space to start</h1>
+            </div>
+        </div>
+
+        <!-- Border Radius -->
+        <div class="tabs__content">
+            <div class="border-radius__wrap">
+                <div class="top-left">
+                    <input class="inputTL" type="range" minlength="0" maxlength="50">
+                </div>
+                <div class="top-right">
+                    <input class="inputTR" type="range" minlength="0" maxlength="50">
+                </div>
+                <div class="bottom-right">
+                    <input class="inputBR" type="range" minlength="0" maxlength="50">
+                </div>
+                <div class="bottom-left">
+                    <input class="inputBL" type="range" minlength="0" maxlength="50">
+                </div>
+            </div>
+            <div class="example-box">
+                <p class="brTL"></p>
+                <p class="brTR"></p>
+                <p class="brBR"></p>
+                <p class="brBL"></p>
+            </div>
+        </div>
+
+        <!-- Array -->
+        <div class="tabs__content">
+            <div class="buttons">
+                <button class="button button__eng">ENG</button>
+                <button class="button button__rus">RUS</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* TABS */
+
+/* Style the tab */
+.tabs {
+    overflow: hidden;
+    border: 1px solid inherit;
+    background-color: inherit;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab-button {
+    cursor: pointer;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    transition: 0.3s;
+    list-style: none;
+}
+
+/* Change background color of buttons on hover */
+.tab-button:hover {
+    background-color: #aca5a55b;
+}
+
+/* Create an active/current tablink class */
+.tab-button.active {
+    background-color: #aca5a55b;
+}
+
+.tabs__content {
+    display: none;
+}
+
+.tabs__content.active {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Random color */
+.color-wrap {
+    background-color: inherit;
+}
+
+.hex-color::selection {
+    background-color: #aca5a55b;
+}
+
+/* Border radius */
+.border-radius__wrap {
+    position: relative;
+    width: 550px;
+    height: 350px;
+}
+
+.example-box {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    background-color: lightblue;
+    position: absolute;
+    left: 625px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* array buttons */
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    border: none;
+    border-radius: 6px;
+    padding: 20px 35px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: tomato;
+}
+
+.button:nth-child(1) {
+    margin-right: 25px;
+}
+
+.button:hover {
+    background-color: rgb(223, 84, 60);
+}
